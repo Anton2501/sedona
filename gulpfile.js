@@ -12,7 +12,7 @@ var del = require("del");
 
 
 gulp.task('style', function() {
-  return gulp.src('app/scss/style.scss')
+  return gulp.src('app/scss/main.scss')
         .pipe(sass())
         .pipe(autoprefixer({
           browsers: ['last 2 versions'],
