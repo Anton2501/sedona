@@ -3,39 +3,14 @@
   background-color: #ffffff;
 
   &--opened {
-    .header__menu-btn {
-
-      span {
-        background-color: transparent;
-
-        &::before,
-        &::after {
-          background-color: #ffffff;
-          border-radius: 1px;       
-        }
-
-        &::before {
-          top: 0;
-          transform: rotate(45deg);
-          
-        }
-
-        &::after {
-          bottom: 0;
-          transform: rotate(-45deg);
-          
-        }
-
-      }
-    }
-
     .header__navigation {
       display: block;
+      transform: translateX(0);
     }
   }
 }
 
-.header__menu-btn {
+.header__menu-btn { 
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +20,7 @@
   font-size: 0;
   @include btn-reset();
   z-index: 10;
-
+  
   span {
     position: absolute;
     content: "";
@@ -54,36 +29,69 @@
     right: 19px;
     height: 4px;
     background-color: #81b3d2;
+    transition: background 0s 0.3s;
+    
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #81b3d2;
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+      }
+      
+      &::before {
+        top: -8px;
+        transition-property: top, transform;
+      }
+
+      &::after {
+        bottom: -8px;
+        transition-property: bottom, transform;
+      }
+  }  
+} 
+  
+/* состояние active при открытом меню  */
+ 
+.header__menu-btn--opened {
+  span {
+    background: none;
+    
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
 
     &::before,
     &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-color: #81b3d2;
-      transition-duration: 0.4s, 0.4s;
-      transition-delay: 0.3s, 0s;
-    }  
-    &::before {
-      top: -8px;
-      transition-property: transform;
-    }
-    &::after {      
-      bottom: -8px;
-      transition-property: transform;
+      background: #ffffff;
+      transition-delay: 0s, 0.3s;
     }
   }
 }
 
+
 .header__navigation {
-  display: none;
-  position: relative;
+  width: 320px;
+  height: 0;
+  transition: all ease .9s;
+  overflow: hidden;
+
+  &--opened {
+    height: 224px;
+  }
 }
 .header__item {
-  height: 56px;
-  
+  height: 56px;  
   background-color: #81b3d2;  
   border-bottom: 1px solid #678fa8;
   transition: all ease 0.2s; 
@@ -100,7 +108,6 @@
 
   &:last-child {
     border-bottom: none;
-    box-shadow: inset 0 -4px 10px 0 rgba(0, 0, 0, 0.2);
   }
 
   &:hover {
@@ -136,6 +143,7 @@
   position: relative;
   height: 56px;
   border-bottom: 1px solid grey;
+  box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 .header__logo-link {
   position: absolute;
