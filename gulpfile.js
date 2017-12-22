@@ -38,13 +38,14 @@ gulp.task('build', ['delete'], function() {
   gulp.src('app/css/**').pipe(gulp.dest("build/css"));  
   gulp.src('app/js/**').pipe(gulp.dest("build/js"));
   gulp.src('app/fonts/**').pipe(gulp.dest("build/fonts"));
-  gulp.src('app/**/*.html').pipe(gulp.dest("build"));
+  gulp.src('app/**/*.html').pipe(gulp.dest("build"));  
   gulp.src("app/img/**/*.{png,jpg,gif}")
     .pipe(imagemin([
        imagemin.optipng({optimizationLevel: 3}),
        imagemin.jpegtran({progressive: true})
      ]))
      .pipe(gulp.dest("build/img"));
+  gulp.src('app/img/**/*.svg').pipe(gulp.dest("build/img"));
 });
 
 gulp.task('browser-sync', function() { 
