@@ -4,29 +4,28 @@
 
   &--opened {
     .header__menu-btn {
-      right: 20px;
-      width: 24px;
 
       span {
-        width: 0;
-        height: 0;
+        background-color: transparent;
 
         &::before,
         &::after {
-          position: absolute;
-          content: "";
-          top: 0px;
-          left: -3px;
-          width: 28px;
-          height: 4px;
           background-color: #ffffff;
-          border-radius: 1px;
-          transform: rotate(45deg);
+          border-radius: 1px;       
         }
-        &::after {
+
+        &::before {
           top: 0;
-          transform: rotate(-45deg);
+          transform: rotate(45deg);
+          
         }
+
+        &::after {
+          bottom: 0;
+          transform: rotate(-45deg);
+          
+        }
+
       }
     }
 
@@ -35,12 +34,14 @@
     }
   }
 }
+
 .header__menu-btn {
   position: absolute;
-  top: 16px;
-  right: 19px;
-  width: 25px;
-  height: 23px;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 63px;
+  height: 56px;
   font-size: 0;
   @include btn-reset();
   z-index: 10;
@@ -48,28 +49,34 @@
   span {
     position: absolute;
     content: "";
-    top: 10px;
-    left: calc(50% - 11px);
-    width: 23px;
+    top: 25px;
+    left: 19px;
+    right: 19px;
     height: 4px;
     background-color: #81b3d2;
-    transition: all ease 0.2s;
 
     &::before,
     &::after {
       position: absolute;
       content: "";
-      top: -8px;
       left: 0;
-      width: 23px;
+      width: 100%;
       height: 4px;
       background-color: #81b3d2;
+      transition-duration: 0.4s, 0.4s;
+      transition-delay: 0.3s, 0s;
+    }  
+    &::before {
+      top: -8px;
+      transition-property: transform;
     }
-    &::after {
-      top: 8px;
+    &::after {      
+      bottom: -8px;
+      transition-property: transform;
     }
   }
 }
+
 .header__navigation {
   display: none;
   position: relative;
@@ -99,6 +106,10 @@
   &:hover {
     border-top: 1px solid #669ec0;
     background-color: #669ec0;
+
+    &:first-child{
+      border-top: none;
+    }
   }
 
   &:active {
@@ -133,3 +144,13 @@
   width: 102px;
   height: 83px;
 }
+
+@media (min-width: 768px) {
+    
+
+
+
+
+
+}
+
