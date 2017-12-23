@@ -21,3 +21,18 @@ ul, li {
 @import "mixins.scss";
 
 @import "blocks/header.scss";
+
+
+
+
+@media (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
