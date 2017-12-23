@@ -1,8 +1,9 @@
 var menuBtn = document.querySelector(".header__menu-btn");
-var header = document.querySelector(".header");
+var menu = document.querySelector(".header__navigation");
 
 
 menuBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  header.classList.toggle("header--opened");
+  menuBtn.classList.toggle("header__menu-btn--opened");
+  menu.classList.toggle("header__navigation--opened");  
 });
