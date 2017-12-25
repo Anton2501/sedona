@@ -136,7 +136,6 @@
 .header__logo {
   position: relative;
   height: 56px;
-  border-bottom: 1px solid grey;
   box-shadow: 0 -4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 .header__logo-link {
@@ -146,12 +145,10 @@
   width: 102px;
   height: 83px;
   transition: all ease 0.2s;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
-  .header {  
-    border-bottom: 1px solid black;
-  }
   .header__menu-btn {
     display: none;
   }
@@ -213,7 +210,6 @@
   .header__logo {
     position: relative;
     height: 0;
-    border-bottom: none;
   }
   .header__logo-link {
     position: absolute;
