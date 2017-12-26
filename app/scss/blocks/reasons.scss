@@ -1,0 +1,217 @@
+.reasons {}
+.reasons__header {
+  padding: 42px 25px 17px 25px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+.reasons__dis {
+  position: relative;
+  padding: 10px 10px 24px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+  background-color: #ffffff;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -17px;
+    left: 0;
+    width: 100%;
+    height: 37px;
+    background: url(../img/white-triagle.png) 0 0 no-repeat;
+  }
+}
+
+.reasons__blue-block {
+  padding: 58px 0px 40px 0px;
+  background-color: #81b3d2;
+
+  &--second {
+    padding: 40px 0 39px 0;
+  }
+}
+.reasons__blue-title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+.reasons__blue-num {
+  display: block;
+  position: relative;
+  width: 32px;
+  margin: 0 auto 15px auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  background-color: #81b3d2;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -9px;
+    width: 9px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+  &::after {
+    left: auto;
+    right: -9px;
+  }
+}
+.reasons__blue-dis {
+  display: block;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+.reasons__pic-block {
+  width: 320px;
+  height: 260px;
+}
+.reasons__advantages {
+  padding: 36px 21px 8px 70px;
+}
+.reasons__advantages-item {
+  position: relative;
+  margin-bottom: 29px;
+
+  &--house {
+    &::before {
+      position: absolute;
+      top: -10px;
+      left: -48px;
+      content: "";
+      width: 37px;
+      height: 41px;
+      background: url(../img/icon-house.svg) 0 0 no-repeat;
+    }    
+  }
+
+  &--gift {
+    &::before {
+      position: absolute;
+      top: -12px;
+      left: -45px;
+      content: "";
+      width: 32px;
+      height: 40px;
+      background: url(../img/icon-gift.svg) 0 0 no-repeat;
+    }    
+  }
+
+  &--burger {
+    &::before {
+      position: absolute;
+      top: -5px;
+      left: -51px;
+      content: "";
+      width: 38px;
+      height: 40px;
+      background: url(../img/icon-burger.svg) 0 0 no-repeat;
+    }    
+  }
+}
+.reasons__advantages-title {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #000000;
+}
+.reasons__advantages-dis {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #333333;
+}
+
+.reasons__rest-reasons {
+  padding: 0 20px;
+  background-color: #eeeeee;
+}
+.reasons__rest-reasons-item {
+  padding: 28px 0 27px;
+  border-bottom: 1px solid #d6d6d6;
+
+  &:last-child {
+    border: none;
+  }
+}
+.reasons__rest-reasons-title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+.reasons__rest-reasons-num {
+  display: block;
+  position: relative;
+  width: 32px;
+  margin: 0 auto 15px auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -9px;
+    width: 9px;
+    height: 2px;
+    background-color: #333333;
+  }
+  &::after {
+    left: auto;
+    right: -9px;
+  }
+}
+.reasons__rest-reasons-dis {
+  display: block;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+
+
