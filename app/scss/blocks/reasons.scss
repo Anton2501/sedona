@@ -1,4 +1,3 @@
-.reasons {}
 .reasons__header {
   padding: 42px 25px 17px 25px;
   font-size: 18px;
@@ -36,6 +35,12 @@
 
   &--second {
     padding: 40px 0 39px 0;
+
+    .reasons__blue-title {
+      br {
+        display: none;
+      }
+    }
   }
 }
 .reasons__blue-title {
@@ -213,5 +218,179 @@
   text-align: center;
   color: #333333;
 }
+
+@media (min-width: 768px) {
+  .reasons__header {
+    width: 490px;
+    padding: 51px 0 28px;
+    margin: 0 auto;
+    font-size: 21px;
+  }
+  .reasons__dis {
+    padding: 0 0 49px;
+
+    &::after {
+      display: none;
+    }
+  }
+  .reasons__first {
+    display: flex;
+    min-height: 255px;
+    font-size: 0;
+  }
+  .reasons__blue-block {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 33.333%;
+    height: 256px;
+    padding: 46px 30px 43px;
+
+    &--second {
+      order: 1;
+
+      .reasons__blue-title {
+        width: 150px;
+
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+  .reasons__blue-title {
+    width: 140px;
+    margin: 0 auto 8px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .reasons__pic-block {
+    flex-grow: 1;
+    width: 66.666666%;
+    height: 256px;
+    overflow: hidden;
+  }
+  .reasons__blue-num {
+    margin: 0 auto 23px auto;
+  }
+  .reasons__advantages {
+    display: flex;
+    padding: 0;
+  }
+  .reasons__advantages-item {
+    width: 256px;
+    flex-grow: 1;
+    padding: 160px 46px 61px;
+    margin: 0;
+
+    &--house {
+      order: 0;
+
+      &::before {
+        position: absolute;
+        top: 59px;
+        left: calc(50% - 38px);
+        content: "";
+        width: 75px;
+        height: 74px;
+        background: url(../img/icon-house.svg) 0 0 no-repeat;
+      }    
+    }
+
+    &--gift {
+      order: 2;
+
+      &::before {
+        position: absolute;
+        top: 57px;
+        left: calc(50% - 32px);
+        content: "";
+        width: 76px;
+        height: 75px;
+        background: url(../img/icon-gift.svg) 0 0 no-repeat;
+      }    
+    }
+
+    &--burger {
+      order: 1;
+
+      &::before {
+        position: absolute;
+        top: 62px;
+        left: calc(50% - 39px);
+        content: "";
+        width: 77px;
+        height: 76px;
+        background: url(../img/icon-burger.svg) 0 0 no-repeat;
+      }    
+    }
+  }
+  .reasons__advantages-title {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .reasons__advantages-dis {
+    text-align: center;
+  }
+  .reasons__second {
+    display: flex;
+  }
+  .reasons__rest-reasons {
+    display: flex;
+    padding: 0;
+  }
+  .reasons__rest-reasons-item {
+    flex-grow: 1;
+    min-height: 255px;
+    padding: 46px 0 27px;
+    border: none;
+  }
+  .reasons__rest-reasons-title {
+    width: 140px;
+    margin: 0 auto 9px;
+    font-size: 21px;
+  }
+  .reasons__rest-reasons-num {
+    margin: 0 auto 21px auto;
+  }
+  .reasons__rest-reasons-dis {
+    padding: 0 52px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .reasons__blue-block {
+    padding: 53px 40px 43px;
+
+    &--second {
+      padding: 53px 70px 43px;
+    }
+  }
+  .reasons__advantages-item {
+    padding: 160px 50px 82px;
+
+    &--gift {
+      padding: 160px 90px 82px; 
+    }
+  }
+  .reasons__rest-reasons-dis {
+    padding: 0 60px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
