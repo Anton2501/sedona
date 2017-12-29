@@ -31,21 +31,21 @@ gulp.task('style', function() {
 
 
 gulp.task("delete", function() {
-  return del("build");
+  return del("docs");
 });
 
 gulp.task('build', ['delete'], function() {
-  gulp.src('app/css/**').pipe(gulp.dest("build/css"));  
-  gulp.src('app/js/**').pipe(gulp.dest("build/js"));
-  gulp.src('app/fonts/**').pipe(gulp.dest("build/fonts"));
-  gulp.src('app/**/*.html').pipe(gulp.dest("build"));  
+  gulp.src('app/css/**').pipe(gulp.dest("docs/css"));  
+  gulp.src('app/js/**').pipe(gulp.dest("docs/js"));
+  gulp.src('app/fonts/**').pipe(gulp.dest("docs/fonts"));
+  gulp.src('app/**/*.html').pipe(gulp.dest("docs"));  
   gulp.src("app/img/**/*.{png,jpg,gif}")
     .pipe(imagemin([
        imagemin.optipng({optimizationLevel: 3}),
        imagemin.jpegtran({progressive: true})
      ]))
-     .pipe(gulp.dest("build/img"));
-  gulp.src('app/img/**/*.svg').pipe(gulp.dest("build/img"));
+     .pipe(gulp.dest("docs/img"));
+  gulp.src('app/img/**/*.svg').pipe(gulp.dest("docs/img"));
 });
 
 gulp.task('browser-sync', function() { 

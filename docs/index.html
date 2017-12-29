@@ -23,7 +23,7 @@
         <nav class="header__navigation">
           <ul class="header__nav-list">
             <li class="header__item">
-              <a href="#" class="header__item-link">Главная</a>
+              <a href="#" class="header__item-link  header__item-link--active">Главная</a>
             </li>
             <li class="header__item">
               <a href="#" class="header__item-link">Фото и видео</a>
@@ -46,6 +46,143 @@
           </a>
         </div>
       </header>
+      <!-- =========MAIN======== -->
+      <main class="main-content">
+        <div class="welcome">
+          <img src="img/welcome-text.svg" alt="logo" class="welcome__text">
+        </div>
+        <section class="reasons">
+          <h2 class="reasons__header">
+            Седона — небольшой 
+            городок в Аризоне, 
+            заслуживающий большего!
+          </h2>
+          <p class="reasons__dis">
+            Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!
+          </p>
+          <div class="reasons__first">
+            <div class="reasons__blue-block">
+              <b class="reasons__blue-title">
+                НАСТОЯЩИЙ ГОРОДОК
+              </b>
+              <span class="reasons__blue-num">№1</span>
+              <span class="reasons__blue-dis">
+                СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
+              </span>
+            </div>
+            <div class="reasons__pic-block">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/index-first-reason-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/index-first-reason-desktop.jpg">
+                <img src="img/index-first-reason.jpg" alt="logo" class="reasons__img">
+              </picture>
+            </div>
+          </div>
+          <ul class="reasons__advantages">
+            <li class="reasons__advantages-item reasons__advantages-item--house">
+              <b class="reasons__advantages-title">
+                Жилье
+              </b>
+              <span class="reasons__advantages-dis">
+                Рекомендуем пожить в настоящем мотеле, все как в кино!
+              </span>
+            </li>
+            <li class="reasons__advantages-item  reasons__advantages-item--gift">
+              <b class="reasons__advantages-title">
+                СУВЕНИРЫ
+              </b>
+              <span class="reasons__advantages-dis">
+                Не только китайского, но и местного производства!
+              </span>
+            </li>
+            <li class="reasons__advantages-item  reasons__advantages-item--burger">
+              <b class="reasons__advantages-title">
+                ЕДА
+              </b>
+              <span class="reasons__advantages-dis">
+                Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+              </span>
+            </li>
+          </ul>
+          <div class="reasons__second">
+            <div class="reasons__blue-block  reasons__blue-block--second">
+              <b class="reasons__blue-title">
+                Там есть<br>
+                Мост Дьявола
+              </b>
+              <span class="reasons__blue-num">№2</span>
+              <span class="reasons__blue-dis">
+                Да, по нему можно пройти! Если вы осмелитесь, конечно
+              </span>
+            </div>
+            <div class="reasons__pic-block">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/index-second-reason-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/index-second-reason-desktop.jpg">
+                <img src="img/index-second-reason.jpg" alt="logo" class="reasons__img">
+              </picture>
+            </div>
+          </div>
+          <ul class="reasons__rest-reasons">
+            <li class="reasons__rest-reasons-item">
+              <b class="reasons__rest-reasons-title">
+                НЕБОЛЬШАЯ ПЛОЩАДЬ
+              </b>
+              <span class="reasons__rest-reasons-num">№3</span>
+              <span class="reasons__rest-reasons-dis">
+                Все интересные места находятся очень близко
+              </span>
+            </li>
+            <li class="reasons__rest-reasons-item">
+              <b class="reasons__rest-reasons-title">
+                КРАСИВАЯ ДОРОГА
+              </b>
+              <span class="reasons__rest-reasons-num">№4</span>
+              <span class="reasons__rest-reasons-dis">
+                ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+              </span>
+            </li>
+            <li class="reasons__rest-reasons-item">
+              <b class="reasons__rest-reasons-title">
+                МАЛО ТУРИСТОВ
+              </b>
+              <span class="reasons__rest-reasons-num">№5</span>
+              <span class="reasons__rest-reasons-dis">
+                Большинство едет в гранд каньон и толпится там
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section class="booking">
+          <h2 class="booking__header">
+            ЗАИНТЕРЕСОВАЛИСЬ?
+          </h2>
+          <p class="booking__dis">
+            Укажите предполагаемые даты поездки,<br>
+            и мы покажем вам лучшие предложения гостиниц в седоне
+          </p>
+          <button type="button" class="booking__search-btn">Найти гостиницу</button>
+          <div class="booking__map"></div>
+        </section>
+      </main>
+      <footer class="footer">
+        <span class="footer__hashtag">#VISITSEDONA</span>
+        <ul class="footer__socials">
+          <li class="footer__socials-btn">
+            <a href="#" class="footer__socials-link footer__socials-link--twitter">Twitter</a>
+          </li>
+          <li class="footer__socials-btn">
+            <a href="#" class="footer__socials-link  footer__socials-link--fb">Facebook</a>
+          </li>
+          <li class="footer__socials-btn">
+            <a href="#" class="footer__socials-link  footer__socials-link--yt">YouTube</a>
+          </li>
+        </ul>
+        <div class="footer__htmlacademy">
+          <span>Разработано</span>
+          <a href="#" class="footer__htmlacadeny-link">HTMLAcademy</a>
+        </div>
+      </footer>
     </div>    
   </div>
   <script src="js/mob-menu.js"></script>

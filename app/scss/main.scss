@@ -10,6 +10,9 @@ body {
 ul, li {
   list-style: none;
 }
+button {
+  font-family: "PT Sans", Arial, sans-serif;
+}
 .container {
   width: 320px;
   min-height: 100vh;
@@ -23,8 +26,8 @@ ul, li {
 @import "blocks/header.scss";
 @import "blocks/welcome.scss";
 @import "blocks/reasons.scss";
-
-
+@import "blocks/booking.scss";
+@import "blocks/footer.scss";
 
 
 @media (min-width: 768px) {
