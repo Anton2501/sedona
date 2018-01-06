@@ -134,17 +134,50 @@
       left: 5px;
     }
   }
-
-
-
-
 }
 
+@media (min-width: 1200px) {
+  .gallery__header {
+    padding-top: 113px;
+  }
+  .gallery__dis {
+    padding: 10px 0 70px;
+  }
+  .gallery__list {
+    margin: 0;
+  }
+  .gallery__item {
+    position: relative;
+    width: 33.333%;
 
+    &:first-child {
+      width: 100%;
+    }
 
+    &:nth-child(n+2) {
+      .gallery__wrap {
+        padding-right: 29px;
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+  .gallery__wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+  .gallery__title,
+  .gallery__autor {
+    color: #ffffff;
+  }
+  .gallery__total-like {
+    margin-bottom: -2px;
+    color: #ffffff;
 
-
-
-
-
-
+     &::before {
+      background: url(../img/like-icon-desktop.png) 0 0 no-repeat;
+    }
+  }
+}
