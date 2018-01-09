@@ -6,4 +6,4 @@ After clone:
 * 2. gulp (or «npm run dev»)
 * 3. gulp build (or «npm run build»)
 
-Time: 20.5h
+Time: 23.5h
