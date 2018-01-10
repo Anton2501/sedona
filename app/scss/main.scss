@@ -32,10 +32,12 @@ button {
 @import "blocks/gallery.scss";
 @import "blocks/video-block.scss";
 @import "blocks/form.scss";
+@import "blocks/booking-popup.scss";
 
 
 @media (min-width: 768px) {
   .container {
+    position: relative;
     width: 100%;
   }
 }

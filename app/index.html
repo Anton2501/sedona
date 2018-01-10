@@ -184,6 +184,36 @@
           <a href="https://htmlacademy.ru/" class="footer__htmlacadeny-link">HTMLAcademy</a>
         </div>
       </footer>
+      <form class="booking-popup">
+        <h2 class="booking-popup__header">Поиск гостиницы в Седоне</h2>
+        <div class="booking-popup__wrap">
+          <label for="" class="booking-popup__label">
+            <span class="booking-popup__label-title">ДАТА ЗАЕЗДА:</span>
+            <input type="text" class="booking-popup__input">
+          </label>
+          <label for="" class="booking-popup__label">
+            <span class="booking-popup__label-title">ДАТА ВЫЕЗДА:</span>
+            <input type="text" class="booking-popup__input">
+          </label>
+          <label for="" class="booking-popup__label booking-popup__label--adults">
+            <span class="booking-popup__label-title">ДАТА ВЫЕЗДА:</span>
+            <div class="booking-popup__controls">
+              <button class="booking-popup__btn-min">-</button>
+              <input type="text" class="booking-popup__controls-input">
+              <button class="booking-popup__btn-plus">+</button>
+            </div>            
+          </label>
+          <label for="" class="booking-popup__label booking-popup__label--chuldren">
+            <span class="booking-popup__label-title">ДАТА ВЫЕЗДА:</span>
+            <div class="booking-popup__controls">
+              <button class="booking-popup__btn-min">-</button>
+              <input type="text" class="booking-popup__controls-input">
+              <button class="booking-popup__btn-plus">+</button>
+            </div>            
+          </label>
+          <button type="submit" class="booking-popup__find-btn">Найти</button>
+        </div>
+      </form>
     </div>    
   </div>
   <script src="js/mob-menu.js"></script>
