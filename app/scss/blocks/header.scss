@@ -1,6 +1,18 @@
 .header {  
   position: relative;
+
+  position: static;
+  top: -83px;
+
   background-color: #ffffff;
+  transition: all linear 0.3s;
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+    z-index: 10;
+  }
 }
 
 .header__menu-btn { 
@@ -149,6 +161,18 @@
 }
 
 @media (min-width: 768px) {
+  .header {  
+    position: static;
+    top: -83px;
+
+    &--fixed {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+      z-index: 10;
+    }
+  }
   .header__menu-btn {
     display: none;
   }
@@ -221,6 +245,18 @@
 }
 
 @media (min-width: 1200px) {
+  .header {  
+    position: static;
+    top: -96px;
+
+    &--fixed {
+      position: fixed;
+      width: 1200px;
+      top: 0;
+      box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+      z-index: 10;
+    }
+  }
   .header__logo-link {
     position: absolute;
     top: -56px;

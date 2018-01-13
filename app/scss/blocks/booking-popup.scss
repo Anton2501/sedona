@@ -143,6 +143,13 @@
       background-color: #000000;
     }
   }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: #81b3d2;
+    }
+  }
 }
 .booking-popup__controls-input {
   width: 100%;

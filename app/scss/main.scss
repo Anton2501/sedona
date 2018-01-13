@@ -23,6 +23,12 @@ button {
   overflow: hidden;
 }
 
+.main-content {
+  &--scrolled {
+    padding-top: 56px;
+  }
+}
+
 @import "mixins.scss";
 
 @import "blocks/header.scss";

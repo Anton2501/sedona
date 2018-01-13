@@ -2,10 +2,15 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sedona</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.css">
+
+  <script src="js/jquery-1.8.3.js"></script>
+  <script src="js/jquery-ui-1.9.2.custom.js"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/png" href="img/favicon-64x64.png" sizes="64x64">
@@ -184,8 +189,55 @@
           <a href="https://htmlacademy.ru/" class="footer__htmlacadeny-link">HTMLAcademy</a>
         </div>
       </footer>
+      <div class="booking-popup">
+        <form class="booking-popup__modal">
+          <button class="booking-popup__close-btn">Закрыть</button>
+          <h2 class="booking-popup__header">Поиск гостиницы в Седоне</h2>
+          <div class="booking-popup__wrap">
+            <label class="booking-popup__label">
+              <span class="booking-popup__label-title">ДАТА ЗАЕЗДА:</span>
+              <input type="text" class="booking-popup__input" id="datepicker">
+            </label>
+            <label class="booking-popup__label">
+              <span class="booking-popup__label-title">ДАТА ВЫЕЗДА:</span>
+              <input type="text" class="booking-popup__input" id="datepicker2">
+            </label>
+            <label  for="adults" class="booking-popup__label booking-popup__label--adults">
+              <span class="booking-popup__label-title">ВЗРОСЛЫЕ:</span>
+              <div class="booking-popup__controls"  id="adult-controls">
+                <button class="booking-popup__btn-min">-</button>
+                <input type="text" class="booking-popup__controls-input" value="0" id="adults" disabled>
+                <button class="booking-popup__btn-plus">+</button>
+              </div>            
+            </label>
+            <label for="children" class="booking-popup__label booking-popup__label--children">
+              <span class="booking-popup__label-title">ДЕТИ:</span>
+              <div class="booking-popup__controls"  id="children-controls">
+                <button class="booking-popup__btn-min">-</button>
+                <input type="text" class="booking-popup__controls-input" value="0" id="children" disabled>
+                <button class="booking-popup__btn-plus">+</button>
+              </div>            
+            </label>
+            <button type="submit" class="booking-popup__find-btn">Найти</button>
+          </div>
+        </form>
+        <div class="booking-popup__overlay"></div>
+      </div>      
     </div>    
   </div>
   <script src="js/mob-menu.js"></script>
+  <script src="js/booking-popup.js"></script>
+  <script src="js/popup-controls.js"></script>
+  <script>
+    $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );
+    $( "#datepicker" ).datepicker({
+      dateFormat: "dd MM yy",
+      monthNames: [ "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря" ]
+    });
+    $( "#datepicker2" ).datepicker({
+      dateFormat: "dd MM yy",
+      monthNames: [ "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря" ]
+    });    
+  </script>
 </body>
 </html>
