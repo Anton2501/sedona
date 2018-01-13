@@ -8,4 +8,5 @@ After clone:
 
 Time: 
   26h - LY
-  3h - JS
+  3h - Datepicker
+  3h - Datepicker, controls, animate header
