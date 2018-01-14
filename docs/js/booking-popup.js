@@ -1,13 +1,40 @@
-var bookingPopup = document.querySelector('.booking-popup');
-var openPopupBtn = document.querySelector('.booking__search-btn');
-var closePopupBtn = document.querySelector('.booking-popup__close-btn');
+(function() {
+  var bookingPopup = $('.booking-popup');
+  var openPopupBtn = $('.booking__search-btn');
+  var closePopupBtn = $('.booking-popup__close-btn');
+  var globalOverlay = $('.global-overlay');
 
-closePopupBtn.addEventListener('click', function (event) {
-  event.preventDefault();
-  bookingPopup.classList.remove('booking-popup--show');
-})
+  openPopupBtn.click(function (event) {
+    event.preventDefault();
+    bookingPopup.addClass('booking-popup--show');
+    globalOverlay.css('display', 'block');
+  });
 
-openPopupBtn.addEventListener('click', function (event) {
-  event.preventDefault();
-  bookingPopup.classList.add('booking-popup--show');
-})
+  closePopupBtn.click(function (event) {
+    event.preventDefault();
+    bookingPopup.removeClass('booking-popup--show');
+    globalOverlay.css('display', 'none');
+  });
+
+  //Adult & Children counter:
+
+  var current;
+  $('.booking-popup__btn-min').on('click', function(event) {
+    event.preventDefault();
+    current = +$(this).siblings('input').val();
+      input = $(this).siblings('input');
+      $(input).val(current - 1);
+
+      if (current < 1) {
+          $(input).val(current);
+      }
+  });
+
+  $('.booking-popup__btn-plus').on('click', function(event) {
+      event.preventDefault();
+      current = +$(this).siblings('input').val();
+      input = $(this).siblings('input');
+      $(input).val(current + 1);
+  });
+
+})();

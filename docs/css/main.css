@@ -24,9 +24,28 @@ button {
   box-shadow: 0 -5px 9px 2px #dbdbdb;
   overflow: hidden; }
 
+.main-content--scrolled {
+  padding-top: 56px; }
+
+.global-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20; }
+
 .header {
-  position: relative;
+  position: static;
+  top: -83px;
   background-color: #ffffff; }
+  .header--fixed {
+    position: fixed;
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+    box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+    z-index: 10; }
 
 .header__menu-btn {
   position: absolute;
@@ -139,6 +158,15 @@ button {
   z-index: 10; }
 
 @media (min-width: 768px) {
+  .header {
+    position: static;
+    top: -83px; }
+    .header--fixed {
+      position: fixed;
+      width: 100%;
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+      box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+      z-index: 10; }
   .header__menu-btn {
     display: none; }
   .header__navigation {
@@ -190,6 +218,15 @@ button {
     height: 83px; } }
 
 @media (min-width: 1200px) {
+  .header {
+    position: static;
+    top: -96px; }
+    .header--fixed {
+      position: fixed;
+      width: 1200px;
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+      box-shadow: 0px 0px 15px 1px rgba(0, 1, 1, 0.1);
+      z-index: 10; }
   .header__logo-link {
     position: absolute;
     top: -56px;
@@ -1858,6 +1895,14 @@ button {
   position: relative;
   width: 114px;
   height: 38px; }
+  .booking-popup__controls::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 40px;
+    width: 34px;
+    height: 38px;
+    z-index: 2; }
 
 .booking-popup__btn-min,
 .booking-popup__btn-plus {
@@ -1906,6 +1951,8 @@ button {
   outline: none; }
   .booking-popup__controls-input:hover {
     background-color: #ebebeb; }
+  .booking-popup__controls-input:disabled {
+    color: #000000; }
 
 .booking-popup__btn-plus {
   left: auto;
@@ -1967,9 +2014,8 @@ button {
     transition: all ease 0.8s; }
     .booking-popup--show {
       display: block;
-      bottom: 205px; }
-      .booking-popup--show .booking-popup__overlay {
-        display: block; }
+      bottom: 205px;
+      z-index: 30; }
   .booking-popup__modal {
     position: absolute;
     left: 0;

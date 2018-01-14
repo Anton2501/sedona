@@ -1,9 +1,10 @@
-var menuBtn = document.querySelector(".header__menu-btn");
-var menu = document.querySelector(".header__navigation");
+(function() {
+  var menuBtn = $(".header__menu-btn");
+  var menu = $(".header__navigation");
 
-
-menuBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  menuBtn.classList.toggle("header__menu-btn--opened");
-  menu.classList.toggle("header__navigation--opened");  
-});
+  menuBtn.click(function (event) {
+    event.preventDefault();
+    menuBtn.toggleClass("header__menu-btn--opened");
+    menu.toggleClass("header__navigation--opened");  
+  });
+})();

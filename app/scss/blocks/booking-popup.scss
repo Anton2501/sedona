@@ -112,6 +112,16 @@
   position: relative;
   width: 114px;
   height: 38px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 40px;
+    width: 34px;
+    height: 38px;
+    z-index: 2;
+  }
 }
 .booking-popup__btn-min,
 .booking-popup__btn-plus {
@@ -166,6 +176,10 @@
 
   &:hover {
     background-color: #ebebeb;
+  }
+
+  &:disabled {
+    color: #000000;
   }
 }
 .booking-popup__btn-plus {
@@ -229,10 +243,7 @@
     &--show {
       display: block;
       bottom: 205px;
-
-      .booking-popup__overlay {
-        display: block;
-      }
+      z-index: 30;
     }
   }
   .booking-popup__modal {  
