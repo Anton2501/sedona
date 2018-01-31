@@ -4,16 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sedona</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.min.css">
-  <link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.css">
-  <script src="js/jquery-1.8.3.js"></script>
-  <script src="js/jquery-ui-1.9.2.custom.js"></script>  
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-  <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="img/favicon-64x64.png" sizes="64x64">
-  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="assets/css/main.min.css">
+  <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="assets/img/favicon-64x64.png" sizes="64x64">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
 </head>
 <body>
   <div class="page">
@@ -42,9 +38,9 @@
         <div class="header__logo">
           <a class="header__logo-link">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-              <img src="img/logo-sedona-mobile.svg" alt="logo" class="header__logo-pic">
+              <source media="(min-width: 1200px)" srcset="assets/img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="assets/img/logo-sedona-tablet.svg">
+              <img src="assets/img/logo-sedona-mobile.svg" alt="logo" class="header__logo-pic">
             </picture>
           </a>
         </div>
@@ -55,7 +51,7 @@
       <!-- =========MAIN======== -->
       <main class="main-content">
         <div class="welcome">
-          <img src="img/welcome-text.svg" alt="logo" class="welcome__text">
+          <img src="assets/img/welcome-text.svg" alt="logo" class="welcome__text">
         </div>
         <section class="reasons">
           <h2 class="reasons__header">
@@ -78,9 +74,9 @@
             </div>
             <div class="reasons__pic-block">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/index-first-reason-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="img/index-first-reason-desktop.jpg">
-                <img src="img/index-first-reason.jpg" alt="logo" class="reasons__img">
+                <source media="(min-width: 1200px)" srcset="assets/img/index-first-reason-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="assets/img/index-first-reason-desktop.jpg">
+                <img src="assets/img/index-first-reason.jpg" alt="logo" class="reasons__img">
               </picture>
             </div>
           </div>
@@ -123,9 +119,9 @@
             </div>
             <div class="reasons__pic-block">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/index-second-reason-desktop.jpg">
-                <source media="(min-width: 768px)" srcset="img/index-second-reason-desktop.jpg">
-                <img src="img/index-second-reason.jpg" alt="logo" class="reasons__img">
+                <source media="(min-width: 1200px)" srcset="assets/img/index-second-reason-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="assets/img/index-second-reason-desktop.jpg">
+                <img src="assets/img/index-second-reason.jpg" alt="logo" class="reasons__img">
               </picture>
             </div>
           </div>
@@ -197,11 +193,11 @@
           <div class="booking-popup__wrap">
             <label class="booking-popup__label">
               <span class="booking-popup__label-title">ДАТА ЗАЕЗДА:</span>
-              <input type="text" class="booking-popup__input" id="datepicker">
+              <input type="text" class="booking-popup__input" id="datepicker" readonly>
             </label>
             <label class="booking-popup__label">
               <span class="booking-popup__label-title">ДАТА ВЫЕЗДА:</span>
-              <input type="text" class="booking-popup__input" id="datepicker2">
+              <input type="text" class="booking-popup__input" id="datepicker2" readonly>
             </label>
             <label  for="adults" class="booking-popup__label booking-popup__label--adults">
               <span class="booking-popup__label-title">ВЗРОСЛЫЕ:</span>
@@ -227,18 +223,6 @@
     </div>
     <div class="global-overlay"></div>    
   </div>
-  <script src="js/mob-menu.js"></script>
-  <script src="js/dropdown-header.js"></script>
-  <script src="js/booking-popup.js"></script>
-  <script>
-    $( "#datepicker" ).datepicker({
-      dateFormat: "dd MM yy",
-      monthNames: [ "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря" ]
-    });
-    $( "#datepicker2" ).datepicker({
-      dateFormat: "dd MM yy",
-      monthNames: [ "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря" ]
-    });    
-  </script>
+  <script src="assets/js/main.min.js"></script>
 </body>
 </html>
