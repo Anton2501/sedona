@@ -22,13 +22,11 @@ button {
   box-shadow: 0 -5px 9px 2px #dbdbdb;
   overflow: hidden;
 }
-
 .main-content {
   &--scrolled {
     padding-top: 56px;
   }
 }
-
 .global-overlay {
   display: none;
   position: fixed;

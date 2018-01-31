@@ -1,7 +1,6 @@
+/bower_components/
 /node_modules/
-/dist/
+/build/
 /.git/
-/app/css/
-/**/*.psd
 /**/Thumbs.db
 /**/.DS_Store

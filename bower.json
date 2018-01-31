@@ -1,0 +1,21 @@
+{
+  "name": "devbp",
+  "description": "Frontend dev. boilerplate",
+  "main": "",
+  "authors": [
+    "Anton Prokopenko"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Anton2501/devbp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "^3.0.3"
+  }
+}
