@@ -10331,8 +10331,8 @@ c.add(t,1,"d"),u=t.getTime()}v+=this._prepare(g.week,d).replace(/\{days\}/g,y).r
 	$.datepick.regionalOptions.ru = {
 		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
 		'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн',
-		'Июл','Авг','Сен','Окт','Ноя','Дек'],
+		monthNamesShort: ['Января','Февраля','Марта','Апреля','Мая','Июня',
+		'Июля','Августа','Сентября','Октября','Ноября','Декабря'],
 		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
 		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
 		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
@@ -10447,5 +10447,4 @@ c.add(t,1,"d"),u=t.getTime()}v+=this._prepare(g.week,d).replace(/\{days\}/g,y).r
 
 })();
 
-$('#datepicker').datepick({dateFormat: 'dd MM yyyy'});
-$('#datepicker2').datepick({dateFormat: 'dd MM yyyy'});
+$('.datepicker').datepick({dateFormat: 'dd M yyyy'});
