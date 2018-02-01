@@ -7,5 +7,4 @@
 //= blocks/mob-menu.js
 //= blocks/booking-popup.js
 
-$('#datepicker').datepick({dateFormat: 'dd MM yyyy'});
-$('#datepicker2').datepick({dateFormat: 'dd MM yyyy'});
+$('.datepicker').datepick({dateFormat: 'dd M yyyy'});
